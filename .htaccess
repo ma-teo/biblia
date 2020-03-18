@@ -1,7 +1,7 @@
-# RewriteEngine on
+RewriteEngine on
 
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RedirectMatch 403 /(\.git|build|node_modules|public|src|tmp)/
 RedirectMatch 403 /\.gitignore
