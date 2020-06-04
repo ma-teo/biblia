@@ -9,7 +9,7 @@ body {
 }
 
 :focus {
-	outline-color: #fd5;
+    outline-color: #fd5;
 }
 
 #search {
