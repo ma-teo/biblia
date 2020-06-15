@@ -13,3 +13,15 @@ Package | Version
 react | ^16.13.0
 react-dom | ^16.13.0
 react-scripts | ^3.4.0
+
+## Installation
+
+* `npm install`
+
+### Development
+
+* `npm start`
+
+### Production
+
+* `npm run build`
