@@ -2,7 +2,7 @@ import React from 'react'
 import Loading from './components/Loading'
 import VerseTable from './components/VerseTable'
 import SearchBar from './components/SearchBar'
-import { BIBLES } from "./variables"
+import { BIBLES } from './variables'
 
 let VERSES
 let BIBLE

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BIBLES, BOOKS, CHAPTERS } from "../variables"
+import { BIBLES, BOOKS, CHAPTERS } from '../variables'
 
 export default (props) => {
   const bibles = []
