@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #55c;
+  margin: 0;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+}
+
+:focus {
+  outline-color: #fd5;
+}
+
+#search {
+  background-color: #33a;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+select {
+  -webkit-appearance: none;
+  background: #fff no-repeat right 10px center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' viewBox='0 0 320 512'%3E%3Cpath fill='%2333a' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'%3E%3C/path%3E%3C/svg%3E");
+  display: block;
+  max-width: 250px;
+  width: 33%;
+  margin: 0 10px;
+  padding: 5px;
+  padding-right: 35px;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  color: #33a;
+}
+
+select:focus {
+  background: #a80 no-repeat right 10px center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' viewBox='0 0 320 512'%3E%3Cpath fill='%23fff' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'%3E%3C/path%3E%3C/svg%3E");
+  color: #fff;
+}
+
+table {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+td {
+  padding: 5px;
+}
+
+.spinner {
+  background: transparent no-repeat center center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z'%3E%3C/path%3E%3C/svg%3E");
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
