@@ -6,10 +6,10 @@ Website written in [React](https://github.com/facebook/react) using [Create Reac
 
 https://biblia.kosciolwroclaw.pl
 
-## Dependencies
+## Used technologies
 
-Package | Version
---- | ---
-react | `^16.13.1`
-react-dom | `^16.13.1`
-react-scripts | `^3.4.1`
+* NodeJS
+* HTML
+* CSS
+* JavaScript
+* React
