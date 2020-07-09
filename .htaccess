@@ -2,3 +2,12 @@ RewriteEngine on
 
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RedirectMatch 403 /(\.git|build|node_modules|public|src|tmp)/
+RedirectMatch 403 /\.env
+RedirectMatch 403 /\.gitignore
+RedirectMatch 403 /\.htaccess
+RedirectMatch 403 /app\.js
+RedirectMatch 403 /package\.json
+RedirectMatch 403 /package-lock.\json
+RedirectMatch 403 /README\.md
