@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Loading from './components/Loading'
 import VerseTable from './components/VerseTable'
 import SearchBar from './components/SearchBar'
-import { BIBLES } from './variables'
+import { BIBLES } from './data/variables.json'
 
 export default () => {
   const [bible, setBible] = useState(localStorage.getItem('bible') || 0)
@@ -11,7 +11,7 @@ export default () => {
   const [verses, setVerses] = useState()
 
   useEffect(() => {
-    fetch(`/bible/${BIBLES[bible]}.json`)
+    fetch(`/static/bible/${BIBLES[bible]}.json`)
     .then(resp => resp.json())
     .then(resp => setVerses(resp))
   }, [bible])
