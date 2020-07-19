@@ -28,7 +28,7 @@ export default () => {
         book={book}
         chapter={chapter}
         onBibleChange={e => setBible(e.target.value)}
-        onBookChange={e => setBook(e.target.value) && setChapter(0)}
+        onBookChange={e => setBook(e.target.value) || setChapter(0)}
         onChapterChange={e => setChapter(e.target.value)}
       />
       {verses ? <VerseTable verses={verses} /> : <Loading />}
