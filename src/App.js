@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Loading from './components/Loading'
 import VerseTable from './components/VerseTable'
 import SearchBar from './components/SearchBar'
-import { BIBLES } from './data/variables.json'
 
 export default () => {
   const [bible, setBible] = useState(localStorage.getItem('bible') || 0)
@@ -11,10 +10,10 @@ export default () => {
   const [verses, setVerses] = useState()
 
   useEffect(() => {
-    fetch(`/static/bible/${BIBLES[bible]}.json`)
+    fetch(`/data?bible=${bible}&book=${book}&chapter=${chapter}`)
     .then(resp => resp.json())
     .then(resp => setVerses(resp))
-  }, [bible])
+  }, [bible, book, chapter])
 
   useEffect(() => localStorage.setItem('bible', bible), [bible])
   useEffect(() => localStorage.setItem('book', book), [book])
@@ -22,31 +21,17 @@ export default () => {
 
   useEffect(() => window.scrollTo(0,0))
 
-  function handleBibleChange(e) {
-    setVerses()
-    setBible(e.target.value)
-  }
-
-  function handleBookChange(e) {
-    setBook(e.target.value)
-    setChapter(0)
-  }
-
-  function handleChapterChange(e) {
-    setChapter(e.target.value)
-  }
-
   return (
     <>
       <SearchBar
         bible={bible}
         book={book}
         chapter={chapter}
-        onBibleChange={handleBibleChange}
-        onBookChange={handleBookChange}
-        onChapterChange={handleChapterChange}
+        onBibleChange={e => setBible(e.target.value)}
+        onBookChange={e => setBook(e.target.value) && setChapter(0)}
+        onChapterChange={e => setChapter(e.target.value)}
       />
-      {verses ? <VerseTable verses={verses[book][chapter]} /> : <Loading />}
+      {verses ? <VerseTable verses={verses} /> : <Loading />}
     </>
   )
 }
