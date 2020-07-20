@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-
+const variables = require('./src/data/variables.json')
 const data = [
   require('./src/data/EIB.json'),
   require('./src/data/UBG.json'),
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.get('/data', (req, res, next) => {
   (req.query.bible && req.query.book && req.query.chapter)
   ? res.json(data[req.query.bible][req.query.book][req.query.chapter])
-  : next()
+  : res.json(variables)
 })
 
 app.listen(9000)

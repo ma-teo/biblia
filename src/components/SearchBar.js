@@ -1,34 +1,33 @@
 import React from 'react'
-import { BIBLES, BOOKS, CHAPTERS } from '../data/variables.json'
 
 export default (props) => {
   const bibles = []
   const books = []
   const chapters = []
 
-  for(let i = 0; i < BIBLES.length; i++) {
+  for(let i = 0; i < props.bibles.length; i++) {
     bibles.push(
       <option
         value={i}
         key={i}
       >
-        {BIBLES[i]}
+        {props.bibles[i]}
       </option>
     )
   }
 
-  for(let i = 0; i < BOOKS.length; i++) {
+  for(let i = 0; i < props.books.length; i++) {
     books.push(
       <option
         value={i}
         key={i}
       >
-        {BOOKS[i]}
+        {props.books[i]}
       </option>
     )
   }
 
-  for(let i = 0; i < CHAPTERS[props.book]; i++) {
+  for(let i = 0; i < props.chapters[props.book]; i++) {
     chapters.push(
       <option
         value={i}
