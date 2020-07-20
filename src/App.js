@@ -13,13 +13,13 @@ export default () => {
   useEffect(() => {
     fetch('/data')
     .then(resp => resp.json())
-    .then(resp => setVariables(resp))
+    .then(data => setVariables(data))
   }, [])
 
   useEffect(() => {
     fetch(`/data?bible=${bible}&book=${book}&chapter=${chapter}`)
     .then(resp => resp.json())
-    .then(resp => setVerses(resp))
+    .then(data => setVerses(data))
   }, [bible, book, chapter])
 
   useEffect(() => localStorage.setItem('bible', bible), [bible])
