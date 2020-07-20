@@ -1,6 +1,5 @@
 node_modules
-/build
-/public/static
-/tmp
-/src/data
-/.htaccess
+build
+static
+tmp
+.htaccess
