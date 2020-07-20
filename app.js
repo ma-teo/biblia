@@ -3,11 +3,11 @@ const path = require('path')
 const app = express()
 
 const data = [
-  require('../data-biblia/EIB.json'),
-  require('../data-biblia/UBG.json'),
-  require('../data-biblia/BW.json'),
-  require('../data-biblia/KJV.json'),
-  require('../data-biblia/BBE.json')
+  require('./src/data/EIB.json'),
+  require('./src/data/UBG.json'),
+  require('./src/data/BW.json'),
+  require('./src/data/KJV.json'),
+  require('./src/data/BBE.json')
 ]
 
 app.use(express.static(path.join(__dirname, 'build')))
