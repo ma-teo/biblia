@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default () => (
+const Loading = () => (
   <div className="spinner" />
 )
+
+export default Loading

@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default (props) => (
+const VerseRow = props => (
   <tr>
     <td>{props.index}</td>
     <td>{props.verse}</td>
   </tr>
 )
+
+export default VerseRow

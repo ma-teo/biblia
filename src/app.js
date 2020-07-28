@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Loading from './components/Loading'
-import VerseTable from './components/VerseTable'
-import SearchBar from './components/SearchBar'
+import Loading from './components/loading'
+import SearchBar from './components/search-bar'
+import VerseTable from './components/verse-table'
 
-export default () => {
+const App = () => {
   const [variables, setVariables] = useState()
   const [bible, setBible] = useState(localStorage.getItem('bible') || 0)
   const [book, setBook] = useState(localStorage.getItem('book') || 0)
@@ -45,3 +45,5 @@ export default () => {
     </>
   )
 }
+
+export default App

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default (props) => {
+const SearchBar = props => {
   const bibles = []
   const books = []
   const chapters = []
@@ -67,3 +67,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default SearchBar

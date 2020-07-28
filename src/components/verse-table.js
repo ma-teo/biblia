@@ -1,7 +1,7 @@
 import React from 'react'
-import VerseRow from './VerseRow'
+import VerseRow from './verse-row'
 
-export default (props) => {
+const VerseTable = props => {
   const verses = props.verses
   const rows = []
 
@@ -23,3 +23,5 @@ export default (props) => {
     </table>
   )
 }
+
+export default VerseTable
