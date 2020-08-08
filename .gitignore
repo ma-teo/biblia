@@ -1,6 +1,8 @@
 node_modules
 build
+
 static
 data
+
 tmp
 .htaccess
