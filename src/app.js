@@ -17,7 +17,7 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`/data?bible=${bible}&book=${book}&chapter=${chapter}`)
+    fetch(`/data/${bible}/${book}/${chapter}`)
     .then(resp => resp.json())
     .then(data => setVerses(data))
   }, [bible, book, chapter])
