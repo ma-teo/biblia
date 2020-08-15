@@ -1,8 +1,7 @@
-node_modules
-build
+/node_modules
+/build
+/tmp
 
-static
+media
 data
-
-tmp
 .htaccess
