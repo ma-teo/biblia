@@ -4,5 +4,10 @@ import App from './app'
 import * as serviceWorker from './service-worker'
 import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+, document.getElementById('app'))
+
 serviceWorker.register()
