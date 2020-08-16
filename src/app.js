@@ -8,7 +8,7 @@ const App = () => {
   const [bible, setBible] = useState(localStorage.getItem('bible') || 0)
   const [book, setBook] = useState(localStorage.getItem('book') || 0)
   const [chapter, setChapter] = useState(localStorage.getItem('chapter') || 0)
-  const [verses, setVerses] = useState()
+  const [verses, setVerses] = useState(JSON.parse(localStorage.getItem('verses')))
 
   useEffect(() => {
     fetch('/data')
@@ -25,6 +25,7 @@ const App = () => {
   useEffect(() => localStorage.setItem('bible', bible), [bible])
   useEffect(() => localStorage.setItem('book', book), [book])
   useEffect(() => localStorage.setItem('chapter', chapter), [chapter])
+  useEffect(() => localStorage.setItem('verses', JSON.stringify(verses)), [verses])
 
   useEffect(() => window.scrollTo(0,0))
 
