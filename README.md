@@ -6,14 +6,6 @@ Website written in [React](https://github.com/facebook/react) using [Create Reac
 
 https://biblia.kosciolwroclaw.pl
 
-## Used technologies
-
-* NodeJS
-* HTML
-* CSS
-* JavaScript
-* React
-
 ## Available Scripts
 
 In the project directory, you can run:
