@@ -1,12 +1,12 @@
 const express = require('express')
 const path = require('path')
-const variables = require('./src/data/variables.json')
+const variables = require('../data/variables.json')
 const data = [
-  require('./src/data/EIB.json'),
-  require('./src/data/UBG.json'),
-  require('./src/data/BW.json'),
-  require('./src/data/KJV.json'),
-  require('./src/data/BBE.json')
+  require('../data/EIB.json'),
+  require('../data/UBG.json'),
+  require('../data/BW.json'),
+  require('../data/KJV.json'),
+  require('../data/BBE.json')
 ]
 
 const app = express()
