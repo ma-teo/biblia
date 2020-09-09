@@ -42,7 +42,7 @@ const App = () => {
         onBibleChange={e => setBible(e.target.value)}
         onBookChange={e => setBook(e.target.value) || setChapter(0)}
         onChapterChange={e => setChapter(e.target.value)}
-      /> : null}
+      /> : undefined}
       {verses ? <VerseTable verses={verses} /> : <Loading />}
     </>
   )

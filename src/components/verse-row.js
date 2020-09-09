@@ -1,9 +1,9 @@
 import React from 'react'
 
-const VerseRow = props => (
+const VerseRow = ({index, verse}) => (
   <tr>
-    <td>{props.index}</td>
-    <td>{props.verse}</td>
+    <td>{index}</td>
+    <td>{verse}</td>
   </tr>
 )
 

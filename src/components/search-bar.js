@@ -39,7 +39,7 @@ const SearchBar = props => {
   }
 
   return (
-    <div id="search">
+    <div className="search">
       <select
         name="bible"
         aria-label="Wybierz przekład"
