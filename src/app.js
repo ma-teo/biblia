@@ -11,13 +11,13 @@ const App = () => {
   const [verses, setVerses] = useState(JSON.parse(localStorage.getItem('verses')))
 
   useEffect(() => {
-    fetch('/data')
+    fetch(process.env.REACT_APP_API_URL)
     .then(resp => resp.json())
     .then(data => setVariables(data))
   }, [])
 
   useEffect(() => {
-    fetch(`/data/${bible}/${book}/${chapter}`)
+    fetch(`${process.env.REACT_APP_API_URL}/${bible}/${book}/${chapter}`)
     .then(resp => resp.json())
     .then(data => setVerses(data))
   }, [bible, book, chapter])
