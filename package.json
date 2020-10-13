@@ -4,11 +4,12 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.3",
+    "workbox-cli": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build && workbox generateSW workbox-config.js",
+    "start": "react-scripts start"
   },
   "browserslist": "defaults"
 }
