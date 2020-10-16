@@ -1,5 +1,3 @@
-import React from 'react'
-
 const VerseRow = ({index, verse}) => (
   <tr>
     <td>{index}</td>

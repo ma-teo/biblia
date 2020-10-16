@@ -2,9 +2,9 @@
   "name": "biblia",
   "version": "1.0.0",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
+    "react": "^17.0.0-rc.3",
+    "react-dom": "^17.0.0-rc.3",
+    "react-scripts": "^4.0.0-next.98",
     "workbox-cli": "^5.1.4"
   },
   "scripts": {

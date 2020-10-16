@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { StrictMode } from 'react'
+import { render } from 'react-dom'
 import App from './app'
-import * as serviceWorker from './service-worker'
+import { register } from './sw'
 import './index.css'
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 , document.getElementById('app'))
 
-serviceWorker.register()
+register()

@@ -1,4 +1,3 @@
-import React from 'react'
 import VerseRow from './verse-row'
 
 const VerseTable = ({verses}) => (
