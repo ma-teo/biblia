@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { render } from 'react-dom'
 import App from './app'
-import { register } from './sw'
+import { register } from './sw-register'
 import './index.css'
 
 render(

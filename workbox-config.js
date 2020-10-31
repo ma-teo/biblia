@@ -7,10 +7,6 @@ module.exports = {
     'static/media/**.*',
   ],
   dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
+  swSrc: 'src/sw.js',
   swDest: 'build/service-worker.js',
-  navigateFallback: 'index.html',
-  navigateFallbackDenylist: [
-    /\/[^/?]+\.[^/]+$/,
-  ],
-  skipWaiting: true,
 }
