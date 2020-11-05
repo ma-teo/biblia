@@ -2,6 +2,7 @@
   "name": "biblia",
   "version": "1.0.0",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.0",
@@ -9,6 +10,7 @@
   },
   "scripts": {
     "build": "react-scripts build && workbox injectManifest workbox-config.js",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start"
   },
   "browserslist": "defaults"
