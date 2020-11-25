@@ -37,7 +37,7 @@ const App = () => {
         bible={bible}
         book={book}
         chapter={chapter}
-        onBibleChange={e => setBible(e.target.value)}
+        onBibleChange={e => setBible(e.target.value) || setChapter(0)}
         onBookChange={e => setBook(e.target.value) || setChapter(0)}
         onChapterChange={e => setChapter(e.target.value)}
       /> : undefined}
