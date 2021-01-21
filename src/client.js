@@ -2,8 +2,7 @@ import { StrictMode } from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './app'
-import { register } from './sw-register'
-import './index.css'
+import './app.css'
 
 render(
   <StrictMode>
@@ -13,4 +12,12 @@ render(
   </StrictMode>
 , document.getElementById('app'))
 
-register()
+if (module.hot) {
+  module.hot.accept()
+}
+
+if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+  })
+}
